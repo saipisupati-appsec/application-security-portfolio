@@ -69,7 +69,7 @@ Secure Development
 ┌─────────────────────────────┐
 │        CI/CD Security       │
 │                             │
-│ SAST │ SCA │ DAST │ IaC    │
+│ SAST │ SCA │ DAST │ IaC     │
 │ Secrets │ Dependencies      │
 └──────────────┬──────────────┘
                │
