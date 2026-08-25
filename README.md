@@ -1,6 +1,6 @@
 # 🔐 Application Security & DevSecOps Portfolio
 
-### Senior Application Security Engineer | AppSec | DevSecOps | Cloud Security | Software Supply Chain Security
+### Application Security Engineer | AppSec | DevSecOps | Cloud Security | Software Supply Chain Security
 
 Welcome to my Application Security portfolio.
 
@@ -14,7 +14,7 @@ The goal is to demonstrate how security can be integrated into the software deve
 
 ## 👨‍💻 About Me
 
-I am a Senior Application Security Engineer focused on building security into modern software development and delivery processes.
+I am an Application Security Engineer focused on building security into modern software development and delivery processes.
 
 ### Areas of Focus
 
