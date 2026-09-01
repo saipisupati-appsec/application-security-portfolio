@@ -2,21 +2,603 @@
 layout: default
 title: Application Security Portfolio
 ---
+
 <section class="hero">
-  <p class="eyebrow">Sai Kumar Pisupati · Application Security Engineer</p>
-  <h1>Security engineered into <em>every release.</em></h1>
-  <p>Practical work across secure SDLC, product security, cloud security, and software supply-chain assurance—built to help teams ship with confidence.</p>
-  <a class="button" href="#work">Explore portfolio work</a>
-</section>
-<section class="section" id="work">
-  <div class="section-heading"><p class="eyebrow">Selected portfolio work</p><h2>Controls that fit how developers build.</h2><p>Projects focus on repeatable guardrails, clear risk communication, and evidence-based security decisions.</p></div>
-  <div class="cards">
-    <a class="card" href="{{ '/projects/devsecops-pipeline/' | relative_url }}"><span class="number">01 / DEVSECOPS</span><h3>Security pipeline</h3><p>Security gates for code, dependencies, secrets, containers, and infrastructure.</p></a>
-    <a class="card" href="{{ '/projects/supply-chain-security/' | relative_url }}"><span class="number">02 / SUPPLY CHAIN</span><h3>Dependency assurance</h3><p>SBOMs, package controls, provenance, and remediation workflows.</p></a>
-    <a class="card" href="{{ '/projects/threat-modeling/' | relative_url }}"><span class="number">03 / DESIGN SECURITY</span><h3>Threat modeling</h3><p>STRIDE-led design reviews that create focused, actionable mitigations.</p></a>
-    <a class="card" href="{{ '/projects/api-security/' | relative_url }}"><span class="number">04 / API SECURITY</span><h3>API protection</h3><p>Secure API design patterns, validation, authorization, and testing.</p></a>
-    <a class="card" href="{{ '/projects/cloud-security/' | relative_url }}"><span class="number">05 / CLOUD SECURITY</span><h3>Cloud guardrails</h3><p>AWS and Terraform patterns for identity, data protection, and visibility.</p></a>
-    <a class="card" href="{{ '/projects/security-automation/' | relative_url }}"><span class="number">06 / AUTOMATION</span><h3>Security automation</h3><p>Developer-friendly automation for inventory, reporting, and response.</p></a>
+  <div class="hero-inner">
+
+    <p class="eyebrow">
+      Application Security Engineer · 8+ Years
+    </p>
+
+    <h1>
+      Building secure software
+      <em>without slowing engineering teams down.</em>
+    </h1>
+
+    <p class="hero-description">
+      I work across Secure SDLC, threat modeling, security testing,
+      DevSecOps, cloud security, and software supply-chain security
+      to help engineering teams ship secure software.
+    </p>
+
+    <div class="hero-meta">
+      <span>Secure SDLC</span>
+      <span>Threat Modeling</span>
+      <span>DevSecOps</span>
+      <span>Cloud Security</span>
+      <span>Product Security</span>
+    </div>
+
+    <div class="hero-actions">
+
+      <a class="button" href="#work">
+        View my work
+      </a>
+
+      <a
+        class="text-link"
+        href="{{ '/resume/' | relative_url }}"
+      >
+        View resume →
+      </a>
+
+    </div>
+
   </div>
 </section>
-<section class="research" id="research"><div class="section"><div class="section-heading"><p class="eyebrow">Security research</p><h2>Notes from the practice.</h2></div><div class="post-list">{% for post in site.posts %}<a href="{{ post.url | relative_url }}"><time>{{ post.date | date: "%b %Y" }}</time><h3>{{ post.title }}</h3><p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p></a>{% endfor %}</div></div></section>
+<section class="proof">
+  <div class="section">
+
+    <div class="proof-grid">
+
+      <div>
+        <strong>8+</strong>
+        <span>Years in software & security</span>
+      </div>
+
+      <div>
+        <strong>50+</strong>
+        <span>Applications threat modeled & reviewed</span>
+      </div>
+
+      <div>
+        <strong>30+</strong>
+        <span>Applications under vulnerability management</span>
+      </div>
+
+      <div>
+        <strong>CI/CD</strong>
+        <span>Security integrated into engineering workflows</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="expertise">
+  <div class="section">
+
+    <div class="section-heading">
+      <p class="eyebrow">Core expertise</p>
+
+      <h2>
+        Security across the software lifecycle.
+      </h2>
+
+      <p>
+        My work spans application security, engineering enablement,
+        cloud security, and security automation.
+      </p>
+    </div>
+
+    <div class="expertise-grid">
+
+      <div class="expertise-item">
+        <span>01</span>
+        <h3>Application Security</h3>
+        <p>
+          Secure SDLC, OWASP Top 10, secure code reviews,
+          vulnerability management, risk assessment and
+          security requirements.
+        </p>
+      </div>
+
+      <div class="expertise-item">
+        <span>02</span>
+        <h3>Security Testing</h3>
+        <p>
+          SAST, DAST, SCA, API security testing,
+          penetration testing, Burp Suite and automated
+          security validation.
+        </p>
+      </div>
+
+      <div class="expertise-item">
+        <span>03</span>
+        <h3>DevSecOps</h3>
+        <p>
+          GitHub Actions, GitHub Advanced Security,
+          CI/CD security gates, automated scanning and
+          developer-focused security controls.
+        </p>
+      </div>
+
+      <div class="expertise-item">
+        <span>04</span>
+        <h3>Cloud Security</h3>
+        <p>
+          AWS and Azure security, WAF, IAM, cloud
+          misconfiguration detection, workload security
+          and attack-path analysis.
+        </p>
+      </div>
+
+      <div class="expertise-item">
+        <span>05</span>
+        <h3>Supply Chain Security</h3>
+        <p>
+          Dependency security, software composition analysis,
+          JFrog Artifactory, JFrog Xray and package governance.
+        </p>
+      </div>
+
+      <div class="expertise-item">
+        <span>06</span>
+        <h3>Security Enablement</h3>
+        <p>
+          Security Champion programs, developer engagement,
+          security reviews, documentation and security
+          awareness.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="section" id="work">
+
+  <div class="section-heading">
+    <p class="eyebrow">Selected work</p>
+
+    <h2>
+      Security problems I've worked on.
+    </h2>
+
+    <p>
+      Practical examples of integrating security into engineering
+      workflows, applications, cloud environments and software
+      supply chains.
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <a class="card" href="{{ '/projects/devsecops-pipeline/' | relative_url }}">
+      <span class="number">01 / DEVSECOPS</span>
+      <h3>CI/CD Security Pipeline</h3>
+      <p>
+        Integrating SAST, SCA and cloud security scanning into
+        CI/CD workflows with automated risk-based controls.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/supply-chain-security/' | relative_url }}">
+      <span class="number">02 / SUPPLY CHAIN</span>
+      <h3>Software Supply Chain Security</h3>
+      <p>
+        Dependency visibility, package governance, JFrog Artifactory,
+        Xray and vulnerability management.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/threat-modeling/' | relative_url }}">
+      <span class="number">03 / THREAT MODELING</span>
+      <h3>Threat Modeling at Scale</h3>
+      <p>
+        STRIDE-based threat modeling and secure design reviews
+        across applications and distributed systems.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/api-security/' | relative_url }}">
+      <span class="number">04 / API SECURITY</span>
+      <h3>API Security</h3>
+      <p>
+        Authentication, authorization, validation, abuse prevention,
+        WAF controls and API security testing.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/cloud-security/' | relative_url }}">
+      <span class="number">05 / CLOUD SECURITY</span>
+      <h3>Cloud Security with Wiz</h3>
+      <p>
+        Identifying cloud misconfigurations, vulnerabilities and
+        attack paths across AWS environments.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/security-automation/' | relative_url }}">
+      <span class="number">06 / AUTOMATION</span>
+      <h3>Security Automation</h3>
+      <p>
+        Python and CI/CD automation for security inventory,
+        vulnerability management and continuous assurance.
+      </p>
+      <span class="card-link">Read case study →</span>
+    </a>
+
+  </div>
+
+</section>
+<section class="experience">
+  <div class="section">
+
+    <div class="section-heading">
+      <p class="eyebrow">Experience</p>
+
+      <h2>
+        From software engineering to application security.
+      </h2>
+    </div>
+
+    <div class="timeline">
+
+      <article class="timeline-item">
+        <div class="timeline-date">
+          2023 — Present
+        </div>
+
+        <div>
+          <h3>Application Security Engineer</h3>
+          <p class="company">DAZN Software · Hyderabad</p>
+
+          <p>
+            Application security, threat modeling, secure code reviews,
+            DevSecOps, cloud security, vulnerability management and
+            security automation across 50+ applications.
+          </p>
+
+          <div class="tags">
+            <span>Threat Modeling</span>
+            <span>GHAS</span>
+            <span>Wiz</span>
+            <span>JFrog Xray</span>
+            <span>Burp Suite</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">
+          2022 — 2023
+        </div>
+
+        <div>
+          <h3>Security Engineer</h3>
+          <p class="company">Pole To Win International · Hyderabad</p>
+
+          <p>
+            Application security operations, vulnerability remediation,
+            secure code review, security monitoring and Security Champion
+            enablement across 30+ applications.
+          </p>
+
+          <div class="tags">
+            <span>Checkmarx</span>
+            <span>Fortify</span>
+            <span>Python</span>
+            <span>OWASP</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">
+          2020 — 2022
+        </div>
+
+        <div>
+          <h3>Technology Operations Sr. Analyst</h3>
+          <p class="company">Wells Fargo · Hyderabad</p>
+
+          <p>
+            SAST analysis, vulnerability triage, risk prioritization
+            and remediation coordination across .NET, Java and Python
+            applications.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">
+          2018 — 2020
+        </div>
+
+        <div>
+          <h3>Jr. Engineer — Development</h3>
+          <p class="company">VSoft Technologies · Hyderabad</p>
+
+          <p>
+            Software development using C#, ASP.NET, JavaScript,
+            ADO.NET, SQL Server and Oracle, building 100+ C# classes
+            and multiple application modules.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+<section class="impact">
+  <div class="section">
+
+    <div class="section-heading">
+      <p class="eyebrow">Impact</p>
+
+      <h2>
+        Security outcomes, not just security tools.
+      </h2>
+    </div>
+
+    <div class="impact-list">
+
+      <div class="impact-item">
+        <strong>CI/CD security gates</strong>
+        <p>
+          Implemented risk-based controls to prevent high-risk
+          vulnerabilities from reaching production.
+        </p>
+      </div>
+
+      <div class="impact-item">
+        <strong>50+ applications</strong>
+        <p>
+          Conducted secure code reviews and STRIDE-based threat
+          modeling across application portfolios.
+        </p>
+      </div>
+
+      <div class="impact-item">
+        <strong>Supply chain security</strong>
+        <p>
+          Applied JFrog Artifactory and Xray to improve dependency
+          visibility and vulnerability detection.
+        </p>
+      </div>
+
+      <div class="impact-item">
+        <strong>Security enablement</strong>
+        <p>
+          Supported Security Champion programs and developer
+          security adoption through reviews and knowledge sharing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="section-heading">
+    <p class="eyebrow">Selected portfolio work</p>
+
+    <h2>
+      Security controls that fit how developers build.
+    </h2>
+
+    <p>
+      Practical security engineering focused on reducing risk without
+      slowing engineering teams down.
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <a class="card" href="{{ '/projects/devsecops-pipeline/' | relative_url }}">
+      <span class="number">01 / DEVSECOPS</span>
+      <h3>Security Pipeline</h3>
+      <p>
+        Integrating SAST, SCA, secrets, container, and infrastructure
+        security into CI/CD workflows.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/supply-chain-security/' | relative_url }}">
+      <span class="number">02 / SUPPLY CHAIN</span>
+      <h3>Dependency Assurance</h3>
+      <p>
+        Software supply-chain controls covering dependency visibility,
+        package governance, vulnerability detection, and remediation.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/threat-modeling/' | relative_url }}">
+      <span class="number">03 / DESIGN SECURITY</span>
+      <h3>Threat Modeling</h3>
+      <p>
+        STRIDE-based threat modeling and secure design reviews for
+        applications, APIs, and distributed systems.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/api-security/' | relative_url }}">
+      <span class="number">04 / API SECURITY</span>
+      <h3>API Protection</h3>
+      <p>
+        Authentication, authorization, input validation, API abuse
+        prevention, security testing, and WAF controls.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/cloud-security/' | relative_url }}">
+      <span class="number">05 / CLOUD SECURITY</span>
+      <h3>Cloud Guardrails</h3>
+      <p>
+        AWS security patterns covering identity, data protection,
+        network controls, workload security, and visibility.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+    <a class="card" href="{{ '/projects/security-automation/' | relative_url }}">
+      <span class="number">06 / AUTOMATION</span>
+      <h3>Security Automation</h3>
+      <p>
+        Developer-friendly automation for security inventory, reporting,
+        vulnerability management, and continuous assurance.
+      </p>
+      <span class="card-link">View project →</span>
+    </a>
+
+  </div>
+</section>
+
+<section class="capabilities">
+  <div class="section">
+
+    <div class="section-heading">
+      <p class="eyebrow">Security engineering</p>
+
+      <h2>
+        From design review to production.
+      </h2>
+
+      <p>
+        Security is most effective when it is built into the engineering
+        lifecycle rather than added at the end.
+      </p>
+    </div>
+
+    <div class="capability-grid">
+
+      <div class="capability">
+        <span>01</span>
+        <h3>Secure SDLC</h3>
+        <p>
+          Security requirements, secure design reviews, code review,
+          security testing, and release controls.
+        </p>
+      </div>
+
+      <div class="capability">
+        <span>02</span>
+        <h3>Application Security</h3>
+        <p>
+          SAST, DAST, SCA, secrets detection, vulnerability management,
+          and OWASP-driven application security.
+        </p>
+      </div>
+
+      <div class="capability">
+        <span>03</span>
+        <h3>Cloud Security</h3>
+        <p>
+          AWS workload security, identity, WAF, API Gateway,
+          containers, and infrastructure security.
+        </p>
+      </div>
+
+      <div class="capability">
+        <span>04</span>
+        <h3>Product Security</h3>
+        <p>
+          Threat modeling, security architecture, risk assessment,
+          security champions, and developer enablement.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="research" id="research">
+  <div class="section">
+
+    <div class="section-heading">
+      <p class="eyebrow">Security research</p>
+
+      <h2>Notes from the practice.</h2>
+
+      <p>
+        Technical write-ups, security analysis, architecture notes,
+        and lessons learned from application security engineering.
+      </p>
+    </div>
+
+    <div class="post-list">
+
+      {% for post in site.posts %}
+
+      <a href="{{ post.url | relative_url }}">
+
+        <time>
+          {{ post.date | date: "%b %Y" }}
+        </time>
+
+        <div>
+          <h3>{{ post.title }}</h3>
+
+          <p>
+            {{ post.excerpt | strip_html | truncatewords: 28 }}
+          </p>
+        </div>
+
+      </a>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="section">
+
+    <p class="eyebrow">Let's connect</p>
+
+    <h2>
+      Building secure software starts with good engineering.
+    </h2>
+
+    <p>
+      Explore the work, read the research, or connect with me to discuss
+      application and product security.
+    </p>
+
+    <div class="hero-actions">
+      <a
+        class="button"
+        href="https://github.com/saipisupati-appsec"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        class="text-link"
+        href="https://www.linkedin.com/in/saikumarpisupati/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn ↗
+      </a>
+    </div>
+
+  </div>
+</section>
