@@ -1,0 +1,14 @@
+title: "Sai Kumar Pisupati | Application Security"
+description: "Application Security, DevSecOps, Cloud Security, and Software Supply Chain Security portfolio."
+url: "https://saipisupati-appsec.github.io"
+baseurl: "/application-security-portfolio"
+author: "Sai Kumar Pisupati"
+paginate: 5
+paginate_path: "/page:num/"
+plugins:
+  - jekyll-paginate
+markdown: kramdown
+permalink: /research/:title/
+social:
+  github: "https://github.com/saipisupati-appsec"
+  linkedin: "https://www.linkedin.com/in/saikumarpisupati/"

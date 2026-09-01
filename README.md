@@ -1,8 +1,8 @@
-# 🔐 Application Security & DevSecOps Portfolio
+# Application Security & DevSecOps Portfolio
 
 ### Application Security Engineer | AppSec | DevSecOps | Cloud Security | Software Supply Chain Security
 
-Welcome to my Application Security portfolio.
+This repository contains the Jekyll source for my Application Security portfolio, showcasing practical work in secure delivery, product security, cloud security, and software supply-chain assurance.
 
 This repository contains practical security engineering projects, security automation, threat models, DevSecOps implementations, cloud security patterns, and software supply-chain security demonstrations.
 

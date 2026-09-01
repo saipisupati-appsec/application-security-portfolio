@@ -1,0 +1,22 @@
+---
+layout: default
+title: Application Security Portfolio
+---
+<section class="hero">
+  <p class="eyebrow">Sai Kumar Pisupati · Application Security Engineer</p>
+  <h1>Security engineered into <em>every release.</em></h1>
+  <p>Practical work across secure SDLC, product security, cloud security, and software supply-chain assurance—built to help teams ship with confidence.</p>
+  <a class="button" href="#work">Explore portfolio work</a>
+</section>
+<section class="section" id="work">
+  <div class="section-heading"><p class="eyebrow">Selected portfolio work</p><h2>Controls that fit how developers build.</h2><p>Projects focus on repeatable guardrails, clear risk communication, and evidence-based security decisions.</p></div>
+  <div class="cards">
+    <a class="card" href="{{ '/projects/devsecops-pipeline/' | relative_url }}"><span class="number">01 / DEVSECOPS</span><h3>Security pipeline</h3><p>Security gates for code, dependencies, secrets, containers, and infrastructure.</p></a>
+    <a class="card" href="{{ '/projects/supply-chain-security/' | relative_url }}"><span class="number">02 / SUPPLY CHAIN</span><h3>Dependency assurance</h3><p>SBOMs, package controls, provenance, and remediation workflows.</p></a>
+    <a class="card" href="{{ '/projects/threat-modeling/' | relative_url }}"><span class="number">03 / DESIGN SECURITY</span><h3>Threat modeling</h3><p>STRIDE-led design reviews that create focused, actionable mitigations.</p></a>
+    <a class="card" href="{{ '/projects/api-security/' | relative_url }}"><span class="number">04 / API SECURITY</span><h3>API protection</h3><p>Secure API design patterns, validation, authorization, and testing.</p></a>
+    <a class="card" href="{{ '/projects/cloud-security/' | relative_url }}"><span class="number">05 / CLOUD SECURITY</span><h3>Cloud guardrails</h3><p>AWS and Terraform patterns for identity, data protection, and visibility.</p></a>
+    <a class="card" href="{{ '/projects/security-automation/' | relative_url }}"><span class="number">06 / AUTOMATION</span><h3>Security automation</h3><p>Developer-friendly automation for inventory, reporting, and response.</p></a>
+  </div>
+</section>
+<section class="research" id="research"><div class="section"><div class="section-heading"><p class="eyebrow">Security research</p><h2>Notes from the practice.</h2></div><div class="post-list">{% for post in site.posts %}<a href="{{ post.url | relative_url }}"><time>{{ post.date | date: "%b %Y" }}</time><h3>{{ post.title }}</h3><p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p></a>{% endfor %}</div></div></section>
