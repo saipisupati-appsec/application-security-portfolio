@@ -1,0 +1,64 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eefafa"/>
+      <stop offset="100%" stop-color="#c8eeee"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
+
+  <circle cx="1000" cy="120" r="210"
+          fill="none"
+          stroke="#70cfc7"
+          stroke-width="2"
+          opacity=".45"/>
+
+  <circle cx="1000" cy="120" r="150"
+          fill="none"
+          stroke="#70cfc7"
+          stroke-width="2"
+          opacity=".35"/>
+
+  <text x="100" y="145"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="28"
+        letter-spacing="7"
+        fill="#557070">
+    SECURITY ENGINEERING
+  </text>
+
+  <text x="100" y="330"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="58"
+        font-weight="700"
+        fill="#182626">
+    CAREERLENS
+  </text>
+
+  <text x="100" y="405"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="32"
+        fill="#486060">
+    Security-Focused Job Intelligence
+  </text>
+
+  <text x="1010" y="580"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="90"
+        fill="#4eaaa4">
+    ◎
+  </text>
+
+  <line x1="100" y1="520" x2="720" y2="520"
+        stroke="#75c9c2"
+        stroke-width="3"/>
+
+  <text x="100" y="575"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        fill="#607777">
+    Application Security · DevSecOps · Cloud Security
+  </text>
+</svg>
