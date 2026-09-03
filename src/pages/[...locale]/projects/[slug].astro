@@ -1,7 +1,7 @@
 ﻿---
 // SPDX-License-Identifier: MIT
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { localePath } from "../../../utils/i18n";
 
 export async function getStaticPaths() {
@@ -61,7 +61,7 @@ const t = (en: string, de: string) =>
 
 const { entry, prev, next } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const cover = entry.data.coverImage;
 const logo = entry.data.image;

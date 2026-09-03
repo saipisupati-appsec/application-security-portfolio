@@ -48,6 +48,12 @@ jobs:
           set -euo pipefail
           npm ci
 
+      - name: Generate Astro types
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx astro sync
+
       - name: Dependency audit
         shell: bash
         run: |

@@ -12,7 +12,7 @@ featured: true
 tags: ["Software Supply Chain Security", "JFrog Artifactory", "JFrog Xray", "SCA", "DevSecOps", "GitHub Actions", "Dependency Security", "Automation"]
 category: "supply-chain"
 image: "/images/projects/jfrog-supply-chain-security/logo.svg"
---------------------------------------------------------------
+---
 
 ## Overview
 
