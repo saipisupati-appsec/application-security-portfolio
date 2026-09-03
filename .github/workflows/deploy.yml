@@ -1,0 +1,139 @@
+﻿name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  security:
+    name: Security checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Verify lockfile
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f package-lock.json || {
+            echo "::error::package-lock.json is missing"
+            exit 1
+          }
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+
+      - name: Dependency audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm audit --audit-level=high
+
+      - name: TypeScript validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx tsc --noEmit
+
+      - name: Astro validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx astro check
+
+  build:
+    name: Build site
+    needs: security
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+
+      - name: Build Astro site
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+
+      - name: Verify build output
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -d "dist" ]; then
+            echo "::error::dist directory was not generated"
+            exit 1
+          fi
+
+          if [ ! -f "dist/index.html" ]; then
+            echo "::error::dist/index.html was not generated"
+            exit 1
+          fi
+
+          echo "Build output verified successfully."
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

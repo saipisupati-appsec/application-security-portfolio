@@ -3,7 +3,8 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://saipisupati-appsec.github.io",
+  base: "/application-security-portfolio",
   i18n: {
     defaultLocale: "en",
     locales: ["en", "de"],
