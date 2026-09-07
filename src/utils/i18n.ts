@@ -2,7 +2,12 @@
 
 /**
  * Returns a locale-prefixed path including the Astro base path.
- * English (default) has no locale prefix; German gets /de prefix.
+ *
+ * English (default):
+ *   /application-security-portfolio/
+ *
+ * German:
+ *   /application-security-portfolio/de/
  */
 export function localePath(path: string, locale: string): string {
   const clean = path.startsWith("/") ? path : `/${path}`;
@@ -19,20 +24,36 @@ export function localePath(path: string, locale: string): string {
 }
 
 /**
- * Returns the alternate locale URL path for the given path.
+ * Returns the alternate locale URL path.
+ *
+ * This function receives the pathname including Astro's base path
+ * and preserves that base path when switching between English and German.
  */
 export function getAlternatePath(
   currentPath: string,
 ): { path: string; locale: string } {
-  if (currentPath.startsWith("/de/") || currentPath === "/de") {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+  // Remove the Astro base path before processing the locale.
+  let path = currentPath;
+
+  if (path === base) {
+    path = "/";
+  } else if (path.startsWith(`${base}/`)) {
+    path = path.slice(base.length);
+  }
+
+  // German -> English
+  if (path === "/de/" || path === "/de") {
     return {
-      path: currentPath.replace(/^\/de/, "") || "/",
+      path: `${base}/`,
       locale: "en",
     };
   }
 
+  // English -> German
   return {
-    path: currentPath === "/" ? "/de/" : `/de${currentPath}`,
+    path: path === "/" ? `${base}/de/` : `${base}/de${path}`,
     locale: "de",
   };
 }
