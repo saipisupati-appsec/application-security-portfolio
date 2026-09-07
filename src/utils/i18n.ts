@@ -34,7 +34,7 @@ export function getAlternatePath(
 ): { path: string; locale: string } {
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-  // Remove the Astro base path before processing the locale.
+  // Remove the Astro base path first.
   let path = currentPath;
 
   if (path === base) {
@@ -43,15 +43,18 @@ export function getAlternatePath(
     path = path.slice(base.length);
   }
 
-  // German -> English
-  if (path === "/de/" || path === "/de") {
+  // German -> English.
+  // Remove /de from any German route, including project pages.
+  if (path === "/de" || path === "/de/" || path.startsWith("/de/")) {
+    const englishPath = path.replace(/^\/de/, "") || "/";
+
     return {
-      path: `${base}/`,
+      path: `${base}${englishPath}`,
       locale: "en",
     };
   }
 
-  // English -> German
+  // English -> German.
   return {
     path: path === "/" ? `${base}/de/` : `${base}/de${path}`,
     locale: "de",
