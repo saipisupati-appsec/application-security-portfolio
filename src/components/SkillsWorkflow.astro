@@ -27,11 +27,33 @@ const groupColors = {
 };
 
 const skillGroups = [
-  { id: "core", name: t("Core Stack", "Kernstack"), items: skills.core ?? [], color: groupColors.core },
-  { id: "auto", name: t("Automation", "Automatisierung"), items: skills.automation ?? [], color: groupColors.auto },
-  { id: "infra", name: t("Infrastructure", "Infrastruktur"), items: skills.infrastructure ?? [], color: groupColors.infra },
-  { id: "mon", name: t("Monitoring", "\u00dcberwachung"), items: skills.monitoring ?? [], color: groupColors.mon },
-  { id: "dev", name: t("Development", "Entwicklung"), items: skills.dev ?? [], color: groupColors.dev },
+  {
+    id: "core",
+    name: t("Application Security", "Application Security"),
+    items: skills.core ?? [],
+    color: groupColors.core,
+  },
+  {
+    id: "auto",
+    name: t("Security Testing & DevSecOps", "Security Testing & DevSecOps"),
+    items: skills.automation ?? [],
+    color: groupColors.auto,
+  },
+  {
+    id: "infra",
+    name: t(
+      "Cloud, AI & Supply Chain Security",
+      "Cloud, AI & Supply Chain Security"
+    ),
+    items: skills.infrastructure ?? [],
+    color: groupColors.infra,
+  },
+  {
+    id: "dev",
+    name: t("Development & Automation", "Development & Automation"),
+    items: skills.dev ?? [],
+    color: groupColors.dev,
+  },
 ];
 
 const COLS = 7;
