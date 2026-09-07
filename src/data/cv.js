@@ -231,10 +231,10 @@ export const skills = {
     "JFrog Xray",
     "JFrog Artifactory",
     "Nullify",
+    "Python",
   ],
 
   dev: [
-    "Python",
     "C#",
     "ASP.NET",
     "Java",
