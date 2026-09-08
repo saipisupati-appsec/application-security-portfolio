@@ -1,10 +1,12 @@
 ﻿---
-// SPDX-License-Identifier: MIT
+/* SPDX-License-Identifier: MIT */
 import { getAlternatePath } from "../utils/i18n";
 
 const { locale = "en", currentPath = "/" } = Astro.props;
 const alt = getAlternatePath(currentPath);
 ---
+
+<!--
 <a
   id="langBtn"
   href={alt.path}
@@ -18,4 +20,4 @@ const alt = getAlternatePath(currentPath);
 >
   {locale === "de" ? "EN" : "DE"}
 </a>
-
+-->
